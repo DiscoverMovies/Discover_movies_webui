@@ -1,0 +1,47 @@
+<!--<div class="container">
+
+    <div>
+        <h1>forums</h1>
+    </div>
+    <div ng-repeat="f in forum_all">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">{{f.title}}</div>
+                        <div class="panel-body">{{f.body}}</div>
+                        <div class="panel-footer">{{f.author_username}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>-->
+
+
+<div class="span6">
+    <table class="table table-striped table-condensed">
+        <thead>
+        <tr>
+            <th style="min-width: 10px;">id</th>
+            <th style="min-width: 30px;">title</th>
+            <th style="min-width: 80px;">body</th>
+            <th style="min-width: 30px;">creator</th>
+            <th style="width:20px;"> </th>
+            <th style="width:20px;"> </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="f in forum_all">
+            <td>{{f.id}}</td>
+            <td>{{ f.title }}</td>
+            <td>{{ f.body}}</td>
+            <td>{{f.author_username}}
+            <td><a ng-click="editForum(user.id)" class="btn btn-small btn-primary">edit</a></td>
+            <td><a ng-click="deleteForum(user.id)" class="btn btn-small btn-danger">delete</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <a ng-click="createNewForum()" class="btn btn-small">create new forum</a>
+</div>
