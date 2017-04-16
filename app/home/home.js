@@ -10,12 +10,9 @@ angular.module('myApp.home',['ngRoute'])
             controller:'HomeCtrl'
         });
         
-        $routeProvider.when('/movie_details',{
-            templateUrl:'home/movie_details.html',
-            controller:'movieDetailsCtrl'
-        });
+        
 }])
-.controller('HomeCtrl', function($scope, $http,$location){
+.controller('HomeCtrl', function($scope, $http,$location,$routeParams){
     $scope.msg = 'Fetching movies';
     $.get('http://localhost:8080/movies').then(function(response){
         var movies = response['movie_list'];
@@ -29,13 +26,8 @@ angular.module('myApp.home',['ngRoute'])
         console.log(resp);
     })
 
-    $scope.movieDetails=function(){
-        $location.path('/movie_details');
-    }
+})
 
-})
-.controller('movieDetailsCtrl', function($scope, $http){
-})
 
 /*.controller('HomeCtrl',['$scope','$http',function(sc, ht){
     $.get('http://localhost:8080/movies').then(function succes(response){

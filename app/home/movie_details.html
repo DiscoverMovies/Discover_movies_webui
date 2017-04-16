@@ -1,1 +1,21 @@
-heyyy
+
+<div class="container">
+        <div class="container">
+        
+        
+                        <div>{{movieDetail.original_title}}</div>
+                        
+                        <div ><a href="/#/movie/{{m.id}}"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.poster_url}}" class="img-responsive" style="width:35%" alt="Image"></a></div>
+                        <div><p>story line</p>{{movieDetail.overview}}</div>
+                        <div class="panel-heading"><p>average votes:</p>{{movieDetail.vote_avg}}</p></div>
+                        <div><p>genre:</p></div>
+                        <div ng-repeat="g in movieDetail.genre">
+                            <div>{{g.name}}</div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+

@@ -7,13 +7,26 @@ angular.module('myApp', [
     'myApp.signin',
     'myApp.signup',
     'myApp.explore',
-    'myApp.forums'
+    'myApp.forums',
+    'myApp.movieDetails'
 ])
-.config([ '$routeProvider', function( $routeProvider) {
+.run(function($rootScope){
+$rootScope.token=[];
+$rootScope.login_value=true;
+$rootScope.remember_me=false;
+$rootScope.showin=true;
+$rootScope.showout=true;
+
+})
+.config([ '$routeProvider', function( $routeProvider,$scope) {
   $routeProvider.when('/create_forum', {templateUrl: 'forums/create_forum.html', controller: 'forumCreationCtrl'});
 
-  $routeProvider.when('/movie_details', {templateUrl: 'home/movie_details.html', controller: 'movieDetailsCtrl'});
+  $routeProvider.when('/movie/id', {templateUrl: 'home/movie_details.html', controller: 'movieDetailsCtrl'});
         $routeProvider.otherwise({redirectTo: '/home'});
-    }]);
+    }])
 
-  
+
+.controller('myAppCtrl',function(){
+
+
+});
