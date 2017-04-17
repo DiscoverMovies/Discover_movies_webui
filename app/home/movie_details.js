@@ -20,9 +20,9 @@ $routeProvider.when('/movie/:id',{
     }, function(resp){
         console.log(resp);
     })
-$.get('http://localhost:8080/recommendation/movie/'+id+'?count=1').then(function(response){
-
-        var  suggest= response;
+$.get('http://localhost:8080/recommendation/movie/'+id+'?count=3').then(function(response){
+console.log('http://localhost:8080/recommendation/movie/'+id+'?count=3');
+        var  suggest= response['movie_list'];
         $scope.suggest=suggest;
         $scope.$apply();
         console.log($scope.suggest);

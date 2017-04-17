@@ -27,3 +27,19 @@
             margin-bottom: 0;
             background-color: #1abc9c;
         }
+
+  h4 {
+    color:red;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+   ;
+}
+btn{ 
+  color:#1abc9c;
+}
+
+  
+   

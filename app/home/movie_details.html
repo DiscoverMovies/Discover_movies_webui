@@ -3,12 +3,15 @@
         <div class="container">
         
         
-                        <div>{{movieDetail.original_title}}</div>
+                        <div><h1 align="center"><b>{{movieDetail.original_title}}<b><h1></div>
                         
-                        <div ><a href="/#/movie/{{m.id}}"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.poster_url}}" class="img-responsive" style="width:35%" alt="Image"></a></div>
-                        <div><p>story line</p>{{movieDetail.overview}}</div>
-                        <div class="panel-heading"><p>average votes:</p>{{movieDetail.vote_avg}}</p></div>
-                        <div><p>genre:</p></div>
+                        <div ><a href="/#/movie/{{m.id}}"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.poster_url}}" class="img-responsive" style="width:35%" alt="Image" border="5"></a></div>
+                        <br>
+                        <br>
+                        
+                        <div><h4>story line:</h4>{{movieDetail.overview}}</div>
+                        <div><h4>average votes:</h4>{{movieDetail.vote_avg}}</div>
+                        <div><h4>genre:</h4></div>
                         <div ng-repeat="g in movieDetail.genre">
                             <div>{{g.name}}</div>
                     
@@ -19,11 +22,16 @@
 
     </div>
 
+<br>
+<br>
+<br>
+<h3><br>Suggestions:</br></h3>
 <div class="container">
-    <div ng-repeat="s in suggest">
+   
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                 <div ng-repeat="s in suggest">
+                <div class="col-md-4">
                     <div class="panel panel-primary">
                         <div class="panel-heading">{{s.original_title}}</div>
                         <div class="panel-body "><a href="/#/movie/{{s.id}}"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{s.poster_url}}" class="img-responsive" style="width:100%" alt="Image"></a></div>
