@@ -19,3 +19,22 @@
 
     </div>
 
+<div class="container">
+    <div ng-repeat="s in suggest">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">{{s.original_title}}</div>
+                        <div class="panel-body "><a href="/#/movie/{{s.id}}"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{s.poster_url}}" class="img-responsive" style="width:100%" alt="Image"></a></div>
+                        <div class="panel-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+   
+

@@ -23,3 +23,7 @@
   content: "|";
   padding-right: 0.3em;
 }
+.jumbotron {
+            margin-bottom: 0;
+            background-color: #1abc9c;
+        }

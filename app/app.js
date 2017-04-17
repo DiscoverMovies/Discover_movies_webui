@@ -8,14 +8,15 @@ angular.module('myApp', [
     'myApp.signup',
     'myApp.explore',
     'myApp.forums',
-    'myApp.movieDetails'
+    'myApp.movieDetails',
+    'myApp.signOut'
 ])
 .run(function($rootScope){
 $rootScope.token=[];
 $rootScope.login_value=true;
 $rootScope.remember_me=false;
 $rootScope.showin=true;
-$rootScope.showout=true;
+$rootScope.showout=false;
 
 })
 .config([ '$routeProvider', function( $routeProvider,$scope) {

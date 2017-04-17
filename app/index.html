@@ -19,9 +19,49 @@
   <br>
   <br>
   <br>
-  
 
-  <div class="container">
+  <div class="jumbotron">
+    <div class="container text-center">
+        <h1>Discover Movies</h1>
+        <p>watch,discover,share...</p>
+    </div>
+</div>
+<div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#home">Home</a></li>
+                <li class="active"><a href="#explore">Explore</a></li>
+                <li class="active"><a href="#forums">Forums</a></li>
+                <!--<div class="col-md-4">
+                    <input class="form-control" type="search" />
+                    <span class="glyphicon glyphicon-search"></span>
+                </div>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li role="presentation" class="active" ng-show="showin" ng-model="signUpOption"><a  id="id01" href="#signin">sign in</a></li>
+          <li role="presentation" class="active" ng-show="showout" ng-model="signOutOption"><a  id="id02" nhref="#signout">Sign out</a></li>
+
+                  <!--<li class="loginclass"><a><span class="glyphicon glyphicon-user"> sign in</span></a></li>-->
+
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+
+  
+<!--
+  <div class= "container" >
     <div class="header claerfix">
       <nav>
         <ul class="nav nav-pills pull-right">
@@ -29,19 +69,17 @@
           <li role="presentation" class="active"><a href="#explore">Explore</a></li>
           <li role="presentation" class="active"><a href="#forums">Forums</a></li>
           <li role="presentation" class="active" ng-show="showin" ng-model="signUpOption"><a  id="id01" href="#signin">sign in</a></li>
-          <!--<li role="presentation" class="active" ng-hide="showout" ng-model="signOutOption"><a  id="id02" ng-click="signInCtrl.signout()">Sign out</a></li>-->
+          <li role="presentation" class="active" ng-show="showout" ng-model="signOutOption"><a  id="id02" nhref="#signout">Sign out</a></li>
 
         </ul>
       </nav>
-      <h3 class="text-muted">Discover Movies</h3>
+     
 
   </div>
+  </div>-->
 
   <div ng-view></div>
-    <footer class="footer">
-      <p> </p>
-    </footer>
-  </div>
+  
 
 
 
@@ -61,6 +99,7 @@
    <script src="explore/explore.js"></script>
     <script src="forums/forums.js"></script>
    <script src="home/movie_details.js"></script>
+    <script src="signin/signout.js"></script>
     
     <!--
     <script src="search/search.js"></script>

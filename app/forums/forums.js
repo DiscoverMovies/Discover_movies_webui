@@ -16,11 +16,12 @@ angular.module('myApp.forums',['ngRoute'])
 .controller('forumsCtrl', function($scope, $http,$location){
     $.get('http://localhost:8080/forum/all').then(function(response){
         var forum_all = response['forum'];
-       
+        
+       console.log(response);
         //$scope.movies = {};
         $scope.forum_all = forum_all;
         $scope.$apply();
-        console.log($scope.forum_all);
+        
     }, function(resp){
         console.log(resp);
     });
@@ -32,8 +33,8 @@ angular.module('myApp.forums',['ngRoute'])
 
 })
 
-.controller('forumCreationCtrl',function($scope,$http,$location){
-     var token=state.token;
+.controller('forumCreationCtrl',function($scope,$http,$location,$rootScope){
+     var token=$rootScope.token;
     var title=$scope.forum_forumName;
     var text=$scope.forum_Description;
     var url=base_url+'/forum/create';

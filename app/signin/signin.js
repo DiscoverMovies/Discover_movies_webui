@@ -21,22 +21,20 @@ angular.module('myApp.signin', ['ngRoute'])
             var username = $scope.uname;
             var password = $scope.psw;
             var url = base_url + '/user/auth';
-
             $.post(url,
                 {
                     username: username,
                     password: password
                 },
                 function (data, status) {
+                    console.log(data.status);
                     if (data.status == "OK") {
                         $location.path('/home');
-                        $rootScope.showin = false;
-                        $rootScope.showout = false;
                         $rootScope.token = data.token;
                         $rootScope.login_value = true;
-
-
-                        if ($scope.checkbox == true) {
+                        $rootScope.showout=true;
+                        $rootScope.showin=false;
+                         if ($scope.checkbox == true) {
                             document.cookie = username + $rootScope.token;
                             $rootScope.remember_me = true;
                         }
@@ -44,11 +42,9 @@ angular.module('myApp.signin', ['ngRoute'])
                     }
                     else
                         alert('wrong username or password');
-
-                }
-            )
-        }
-
+                    })
+            }
+        })
 
       /*  $scope.signout = function () {
             console.log('yes');
@@ -60,7 +56,7 @@ angular.module('myApp.signin', ['ngRoute'])
 
         }*/
 
-    })
+  
 
 /*
 function loginCtrl($scope,$http){
