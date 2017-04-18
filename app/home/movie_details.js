@@ -9,7 +9,7 @@ $routeProvider.when('/movie/:id',{
     }])
 
 
-.controller('movieDetailsCtrl', function($scope, $http,$routeParams){
+.controller('movieDetailsCtrl', function($scope, $http,$routeParams,$rootScope){
     var id=$routeParams.id;
     $.get('http://localhost:8080/movie/get/'+id).then(function(response){
         var movieDetail = response['movie'];
@@ -32,6 +32,23 @@ console.log('http://localhost:8080/recommendation/movie/'+id+'?count=3');
         console.log(resp);
     })
       
+$scope.rate=function(){
+    console.log('in');
+   
+    $.post('http://localhost:8080/rate/movie'+id,
+    { 
+    
+        token:$rootScope.token,rating:$scope.rateInput
+    }
+    ,function(data,status){
+       console.log(data.status);
+    })
+    console.log('done');
 
+    
+    
+    
+
+}
 
 })

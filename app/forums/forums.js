@@ -33,23 +33,3 @@ angular.module('myApp.forums',['ngRoute'])
 
 })
 
-.controller('forumCreationCtrl',function($scope,$http,$location,$rootScope){
-     var token=$rootScope.token;
-    var title=$scope.forum_forumName;
-    var text=$scope.forum_Description;
-    var url=base_url+'/forum/create';
-    $.post(url,
-        {
-            title:title,
-         token:token,
-
-         text:text
-      },
-      function(data, status){
-      if(data.status=="OK"){
-        console.log('created');
-        $location.path('/forums');
-      }
-      });
-
-});

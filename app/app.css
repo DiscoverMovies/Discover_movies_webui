@@ -25,7 +25,7 @@
 }
 .jumbotron {
             margin-bottom: 0;
-            background-color: #1abc9c;
+            background-color:#337ab7;
         }
 
   h4 {
@@ -40,6 +40,26 @@
 btn{ 
   color:#1abc9c;
 }
+/*#imaginary_container{
+    margin-top:20%; /* Don't copy this 
+}*/
+.stylish-input-group .input-group-addon{
+    background: white !important; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.img-responsive{
+  width:"300" ;
+  height:"450";
+}
+
 
   
    

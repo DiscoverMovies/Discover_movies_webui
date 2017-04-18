@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="app.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<body>
+<body data-ng-controller="myAppCtrl">
   <br>
   <br>
   <br>
@@ -41,7 +41,26 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#home">Home</a></li>
                 <li class="active"><a href="#explore">Explore</a></li>
-                <li class="active"><a href="#forums">Forums</a></li>
+                <li class="active"><a href="#forums">Forums</a></li>-->
+
+               <div class="container">
+                  <div class="container1">
+	<div class="row">
+        <div class="col-md-4 pull-right">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search" ng-model="searchItem"  >
+                    <span class="input-group-addon">
+                        <button type="submit" ng-model="searchButton" ng-click="searchMovie()">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div>
+	</div>
+</div>
                 <!--<div class="col-md-4">
                     <input class="form-control" type="search" />
                     <span class="glyphicon glyphicon-search"></span>
@@ -100,6 +119,7 @@
     <script src="forums/forums.js"></script>
    <script src="home/movie_details.js"></script>
     <script src="signin/signout.js"></script>
+     <script src="forums/create_forum.js"></script>
     
     <!--
     <script src="search/search.js"></script>

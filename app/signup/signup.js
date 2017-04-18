@@ -36,16 +36,17 @@ angular.module('myApp.signup', ['ngRoute'])
                         phone: phone
                     },
                     function (data, status) {
-                        if ($scope.checkbox1 == true) {
-                    $rootScope.remember_me = true;
-                    document.cookie = username + state.token;
-                }
+                    if (data.status == "OK") {
+                        $location.path('/home');
                         $rootScope.token = data.token;
                         $rootScope.login_value = true;
-                        $('#id01').text('logout');
-                        console.log(data);
-                        $location.path('/home/likes');
-
+                        $rootScope.showout=true;
+                        $rootScope.showin=false;
+                         if ($scope.checkbox == true) {
+                            document.cookie = username + $rootScope.token;
+                            $rootScope.remember_me = true;
+                        }
+                    }
          })
 
             }
