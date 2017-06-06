@@ -3,13 +3,39 @@
         <p class="lead">discover new movies</p>
         <P><a class="btn btn-lg btn-success" href="#" role="button">sign up</a></P>
     </div>-->
+<div ng-show="showout" ng-model="recomm">
+<h1><b>Recommended for you</b></h1>
+<div class="container">
+
+    <div class="container">
+        <div class="row">
+            <div ng-repeat="k in moviesRec">
+                <div class="col-md-4">
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">{{k.title}}</div>
+
+                        <div class="panel-body "><a href="/#/movie/{{k.id}}">  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{k.poster_url}}" onerror="this.src="images/default_image.png" class="img-responsive" style="width:100%" alt="Image"></a></div>
+                        <div class="panel-footer"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+<h1><b>check these out...</b></h1>
 
 <div class="container">
     
         <div class="container">
             <div class="row">
                  <div ng-repeat="m in movies">
-                <div class="col-md-3">
+                <div class="col-md-4">
                    
                     <div class="panel panel-primary">
                         <div class="panel-heading">{{m.original_title}}</div>

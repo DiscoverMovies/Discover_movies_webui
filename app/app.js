@@ -18,6 +18,7 @@ $rootScope.login_value=true;
 $rootScope.remember_me=false;
 $rootScope.showin=true;
 $rootScope.showout=false;
+$rootScope.uname=[];
 
 })
 .config(['$routeProvider', function ($routeProvider) {

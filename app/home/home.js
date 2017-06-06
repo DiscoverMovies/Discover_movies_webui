@@ -12,9 +12,23 @@ angular.module('myApp.home',['ngRoute'])
         
         
 }])
-.controller('HomeCtrl', function($scope, $http,$location,$routeParams){
+.controller('HomeCtrl', function($scope,$http,$location,$routeParams,$rootScope){
     $scope.msg = 'Fetching movies';
-    $.get('http://localhost:8080/movies').then(function(response){
+   console.log($rootScope.uname);
+    $.get('http://localhost:8080/recommendation/user/'+$rootScope.uname).then(function(response){
+        var moviesRec = response['recommendations'];
+
+        //$scope.movies = {};
+        $scope.moviesRec = moviesRec;
+        $scope.$apply();
+        console.log(moviesRec);
+
+    }, function(resp){
+        console.log(resp);
+    })
+
+
+    $.get('http://localhost:8080/movie/search?=').then(function(response){
         var movies = response['movie_list'];
        
         //$scope.movies = {};
@@ -25,6 +39,7 @@ angular.module('myApp.home',['ngRoute'])
     }, function(resp){
         console.log(resp);
     })
+
 
 })
 

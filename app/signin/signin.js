@@ -19,6 +19,7 @@ angular.module('myApp.signin', ['ngRoute'])
     .controller('signInCtrl', function ($scope, $http, $rootScope, $location) {
         $scope.login = function () {
             var username = $scope.uname;
+            $rootScope.uname=$scope.uname;
             var password = $scope.psw;
             var url = base_url + '/user/auth';
             $.post(url,
