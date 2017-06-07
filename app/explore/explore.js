@@ -1,4 +1,5 @@
 'use strict';
+var base_url = 'http://localhost:8080/app';
 angular.module('myApp.explore',['ngRoute'])
 
 .config(['$routeProvider',function($routeProvider){
@@ -14,7 +15,7 @@ angular.module('myApp.explore',['ngRoute'])
 
 .controller('exploreCtrl', function($scope, $http){
     $scope.msg = 'Fetching movies';
-    $.get('http://localhost:8080/movie/popular/35').then(function(response){
+    $.get(base_url+'/movie/popular/35').then(function(response){
         var movies_comedy = response['movie_list'];
        
         //$scope.movies = {};
@@ -25,7 +26,7 @@ angular.module('myApp.explore',['ngRoute'])
         console.log(resp);
     })
 
-$.get('http://localhost:8080/movie/popular/28').then(function(response){
+$.get(base_url+'/movie/popular/28').then(function(response){
         var movies_action = response['movie_list'];
        
         //$scope.movies = {};
@@ -36,7 +37,7 @@ $.get('http://localhost:8080/movie/popular/28').then(function(response){
         console.log(resp);
     })
 
-$.get('http://localhost:8080/movie/popular/18').then(function(response){
+    $.get(base_url+'/movie/popular/18').then(function(response){
         var movies_drama = response['movie_list'];
        
         //$scope.movies = {};

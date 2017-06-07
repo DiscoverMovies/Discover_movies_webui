@@ -22,16 +22,19 @@ $rootScope.uname=[];
 
 })
 .config(['$routeProvider', function ($routeProvider) {
-        $routeProvider.when('/', {
-            templateUrl: 'index.html',
-            controller: 'myAppCtrl'
+    $routeProvider.when('/', {
+        templateUrl: 'index.html',
+        controller: 'myAppCtrl'
+    }).
+        otherwise({
+            redirectTo:'/'
         });
 
     }])
 
-    .config(['$routeProvider',function($routeProvider){
+   .config(['$routeProvider',function($routeProvider){
 $routeProvider.when('/search',{
-            templateUrl:'search.html',
+            templateUrl:'/search.html',
             controller:'myAppCtrl'
         });
     }])

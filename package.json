@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "DiscoverMovies",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.12",
   "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "repository": "https://github.com/DiscoverMovies/Discover_movies_webui",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
@@ -23,7 +23,7 @@
     "postupdate-deps": "bower update",
 
     "prestart": "npm install",
-    "start": "http-server -a localhost -p 8000 -c-1 ./app",
+    "start": "http-server -a localhost -p 80 -c-1 ./app",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
