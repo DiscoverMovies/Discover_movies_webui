@@ -35,7 +35,7 @@
         <tbody>
         <tr ng-repeat="f in forum_all">
             <td>{{f.id}}</td>
-            <td>{{ f.title }}</td>
+            <td><a href="/#/forums/{{f.id}}">{{ f.title }}</a></td>
             <td>{{ f.body}}</td>
             <td>{{f.author_username}}
             <td><a ng-click="editForum(user.id)" class="btn btn-small btn-primary">reply</a></td>

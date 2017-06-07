@@ -10,7 +10,8 @@ angular.module('myApp', [
     'myApp.forums',
     'myApp.movieDetails',
     'myApp.signOut',
-    'myApp.createForum'
+    'myApp.createForum',
+    'myApp.forumDetails'
 ])
 .run(function($rootScope){
 $rootScope.token=[];
@@ -19,11 +20,12 @@ $rootScope.remember_me=false;
 $rootScope.showin=true;
 $rootScope.showout=false;
 $rootScope.uname=[];
+$rootScope.rates=false;
 
 })
 .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'index.html',
+        templateUrl: '/home/home.html',
         controller: 'myAppCtrl'
     }).
         otherwise({

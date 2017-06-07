@@ -33,18 +33,21 @@ console.log('http://localhost:8080/recommendation/movie/'+id+'?count=3');
     })
       
 $scope.rate=function(){
-    console.log('in');
-   
-    $.post('http://localhost:8080/rate/movie'+id,
+    console.log("inrate");
+   console.log($scope.rateInput);
+       
+    $.post('http://localhost:8080/rate/movie/'+id,
     { 
     
         token:$rootScope.token,rating:$scope.rateInput
     }
     ,function(data,status){
-       console.log(data.status);
+        if(data.status=="OK")
+            $rootScope.rates=false;
+      
+       console.log(data,data.status);
     })
-    console.log('done');
-
+    
     
     
     

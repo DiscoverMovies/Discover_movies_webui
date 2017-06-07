@@ -42,6 +42,7 @@ angular.module('myApp.signup', ['ngRoute'])
                         $rootScope.login_value = true;
                         $rootScope.showout=true;
                         $rootScope.showin=false;
+                        $rootScope.rates=true;
                          if ($scope.checkbox == true) {
                             document.cookie = username + $rootScope.token;
                             $rootScope.remember_me = true;

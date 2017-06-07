@@ -18,4 +18,6 @@ angular.module('myApp.signOut', ['ngRoute'])
         $rootScope.showin=true;
         $rootScope.login_value=false;
         $rootScope.remember_me=false;
+        $rootScope.rates=false;
+        
     })
