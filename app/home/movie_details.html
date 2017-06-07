@@ -1,32 +1,42 @@
 
 <div class="container">
-        <div class="container">
+        <div>
         
-        
+                        <br>
                         <div><h1 align="center"><b>{{movieDetail.original_title}}<b><h1></div>
+                        <div class="row">
                         
-                        <div ><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.poster_url}}" class="img-responsive" style="width:35%" alt="Image" border="5"></div>
+
+              <div class="col-md-8">
+                        <div  ><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movieDetail.poster_url}}" class=" rounded" style="width:60%" alt="Image" border="15"></div>
+                        </div>
+                        
                         <br>
                         <br>
-                        
+                                           <div class="col-md-4 text-justify" >
                         <div><h4>story line:</h4>{{movieDetail.overview}}</div>
                         <div><h4>average votes:</h4>{{movieDetail.vote_avg}}</div>
                         <div><h4>genre:</h4></div>
                         <div ng-repeat="g in movieDetail.genre">
                             <div>{{g.name}}</div>
-                    
                     </div>
-                </div>
-            </div>
-        </div>
 
-    </div>
-    <div>
-<h3 ng-show="rates" >rate movie:<h3>
+                    <h4 ng-show="rates" >rate movie:<h3>
  <input ng-show="rates" data-ng-model="rateInput">
 
 
     <button ng-show="rates" class="btn btn-primary btn-block"  ng-model="rateSubmit" data-ng-click="rate()" type="submit">rate</button>
+
+                    <div>
+                    
+                </div>
+            </div>
+
+       
+        </div>
+
+    </div>
+    <div>
 
 <br>
 <br>
