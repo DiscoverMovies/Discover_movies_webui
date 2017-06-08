@@ -34,18 +34,19 @@ console.log('http://localhost:8080/recommendation/movie/'+id+'?count=3');
       
 $scope.rate=function(){
     console.log("inrate");
-   console.log($scope.rateInput);
+   console.log($scope.radioRate);
        
     $.post('http://localhost:8080/rate/movie/'+id,
     { 
     
-        token:$rootScope.token,rating:$scope.rateInput
+        token:$rootScope.token,rating:$scope.radioRate
     }
     ,function(data,status){
-        if(data.status=="OK")
-            $rootScope.rates=false;
-      
-       console.log(data,data.status);
+        if(data.status=="OK"){
+            //$rootScope.rates=false;
+                console.log(data,data.status);
+        }
+   
     })
     
     

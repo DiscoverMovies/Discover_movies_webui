@@ -21,12 +21,21 @@
                             <div>{{g.name}}</div>
                     </div>
 
-                    <h4 ng-show="rates" >rate movie:<h3>
- <input ng-show="rates" data-ng-model="rateInput">
+                    
+<div class= "rateMovie" ng-show="rates">
+    <h4>rate movie:</h4>
+   <div class="radio">                     
+  <p><label><input type="radio" name="optradio" ng-value=1 ng-model="radioRate">1</label>
+  <label><input type="radio" name="optradio" ng-value=2 ng-model="radioRate">2</label>
+  <label><input type="radio" name="optradio" ng-value=3 ng-model="radioRate">3</label>                    
+  <label><input type="radio" name="optradio" ng-value=4 ng-model="radioRate">4</label>
+<label><input type="radio" name="optradio" ng-value=5 ng-model="radioRate">5</label></p>
+</div>
+ 
 
 
-    <button ng-show="rates" class="btn btn-primary btn-block"  ng-model="rateSubmit" data-ng-click="rate()" type="submit">rate</button>
-
+    <button  class="btn btn-primary btn-block"  ng-model="rateSubmit" data-ng-click="rate()" type="submit">rate</button>
+</div>
                     <div>
                     
                 </div>
