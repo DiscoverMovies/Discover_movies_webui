@@ -1,18 +1,49 @@
-<div class="container">
-        <div class="container">
-        
+<!--
 
-        
-                        <div ng-repeat= "s in movieResult">
-                            <h3 align="center"><a href="/#/movie/{{s.id}}"> <b>{{s.original_title}}<b></a><h3></div>
-                        
-                        
-                        <br>
-                        
-                        
+    <div class="container">
+    <div class="container">
+        <div class="row">
+            <div ng-repeat="s in moviesResult">
+                <div class="col-md-4">
+
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">{{s.original_title}}</div>
+
+                        <div class="panel-body "><a href="/#/movie/{{s.id}}">  <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{s.poster_url}}"  class="img-responsive" style="width:100%" alt="Image"></a></div>
+                        <div class="panel-footer"></div>
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+    </div>
+-->
+
+<div class="container">
+
+
+
+        <div class="container">
+        
+            <div class="row">
+        
+                        <div ng-repeat= "s in movieResult">
+                            <div class="col-md-4">
+
+                                 <div class="panel panel-primary">
+                            <div class="panel panel heading" align="center" ><a href="/#/movie/{{s.id}}"> <b>{{s.original_title}}<b></a></div>
+                            <div class="panel-body"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{s.poster_url}}"  class="img-responsive" style="width:40%" alt="Image"></div>
+                        </div>
+                        <div>
+                        <br>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    

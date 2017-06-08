@@ -44,6 +44,7 @@ $routeProvider.when('/forums/:id',{
            text:text
       },
       function(data, status){
+          console.log(status);
       if(data.status=="OK"){
        console.log('replied');
         $location.path('/forums/');

@@ -78,6 +78,7 @@ $routeProvider.when('/search',{
        
         //$scope.movies = {};
         $scope.movieResult = movieResult;
+        console.log(movieResult);
         $scope.$apply();
           $.each(movieResult, function (idx, item) {
         console.log(item.original_title);

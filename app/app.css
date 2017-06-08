@@ -65,6 +65,7 @@ btn{
 }
 
 .panel-footer {
+    border-color:#080808;
     padding: 10px 15px;
     background-color:#080808;
     border-top: 1px solid #080808;
@@ -72,5 +73,23 @@ btn{
     border-bottom-left-radius: 3px;
 }
 
-  
+  hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
    
+   .panel-primary
+   {
+     border-color:#080808;
+   }
+   .panel-heading{
+     background-color:#080808;
+   }
+   .body{
+     width: 100%;
+   }
