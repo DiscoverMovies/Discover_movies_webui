@@ -13,7 +13,12 @@
                         <div>{{forumDetail.body}}</div>
                         <div><h4>id:</h4>{{forumDetail.id}}
                         <h4>author:</h4>{{forumDetail.author_username}}</div>
+
+
                     
+                    </div>
+                     <div ng-repeat="g in replyDetail">
+                            <div>{{g.author_username}}</div>
                     </div>
                     <br>
                     <input ng-show="showout" ng-model="replyPost">

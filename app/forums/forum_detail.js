@@ -20,11 +20,13 @@ $routeProvider.when('/forums/:id',{
     }, function(resp){
         console.log(resp);
     })
-    $.get('http://localhost:8080/forum/replies/'+id).then(function(response){
-        //var replyDetail = response['forum'];
-        //$scope.forumDetail=forumDetail;
-        //$scope.$apply();
-        console.log(response);
+    $.get('http://localhost:8080/forum/replies/get/'+id).then(function(response){
+        var replyDetail = response['replies'];
+        $scope.replyDetail=replyDetail;
+        $scope.$apply();
+        console.log(replyDetail);
+        
+
     
     }, function(resp){
         console.log(resp);
