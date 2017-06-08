@@ -1,26 +1,17 @@
 <div class="container">
     <h1>create forum</h1>
 
-    <form novalidate="novalidate" class="form-horizontal">
-        <div class="control-group">
-            <label class="control-label" for="inputForumName">Forum name:</label>
-            <div class="controls">
-                <input type="text" id="inputForumName" ng-model="forum_Name"/>
-            </div>
-        </div>
-       <!-- <div class="form-group">
-  <label for="comment">Comment:</label>
-  <textarea class="form-control" rows="5" id="comment"></textarea>
-</div>-->
-        <div class="control-group">
-            <label class="control-label" for="inputBody">Description:</label>
-            <div class="controls">
-                <input type="textarea" id="inputLastName" ng-model="forum_Description"/>
-            </div>
-        </div>
-        <div class="control-group">
-            <div class="controls">
-              <!-- user-detail.html: -->
+
+<div class="form-group">
+    <label for="inputsm">forum title:</label>
+    <input class="form-control input-sm" id="inputsm" type="text" ng-model="forum_Name">
+  </div>
+
+
+<div class="form-group">
+    <label for="inputlg">description:</label>
+    <input class="form-control input-sm" rows="3" id="inputsm" type="text" ng-model="forum_Description">
+  </div>
                 <a ng-click="#forums" class="btn btn-small">cancel</a>
                 <a ng-click="create()" class="btn btn-small btn-primary" ng-model="forumbutton">create forum</a>
 

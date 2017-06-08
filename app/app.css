@@ -59,7 +59,18 @@ btn{
   width:"300" ;
   height:"450";
 }
+.panel-primary > .panel-heading{
+        background-color:#080808;
+            border-color:#080808;
+}
 
+.panel-footer {
+    padding: 10px 15px;
+    background-color:#080808;
+    border-top: 1px solid #080808;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
 
   
    
