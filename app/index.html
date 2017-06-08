@@ -16,17 +16,7 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body data-ng-controller="myAppCtrl">
-  <br>
-  <br>
-  <br>
-
-  <div class="jumbotron">
-    <div class="container text-center">
-        <h1>Discover Movies</h1>
-        <p>watch,discover,share...</p>
-    </div>
-</div>
-<div>
+<div style="margin:0; padding:0">
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -34,7 +24,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-
             </button>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -46,10 +35,11 @@
                <div class="container">
                   <div class="container1">
 	<div class="row">
-        <div class="col-md-4 pull-right">
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
             <div id="imaginary_container"> 
                 <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Search" ng-model="searchItem"  >
+                    <input type="text" class="form-control"  placeholder="Search" ng-model="searchItem" style="height:50px" >
                     <span class="input-group-addon">
                         <button type="submit" ng-model="searchButton" ng-click="searchMovie()">
                             <span class="glyphicon glyphicon-search"></span>
